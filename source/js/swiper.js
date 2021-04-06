@@ -1,6 +1,4 @@
 import Swiper, { Autoplay, Pagination } from 'swiper';
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
 
 Swiper.use([Autoplay, Pagination]);
 
@@ -15,7 +13,9 @@ const swiper = new Swiper('.swiper-container', {
 
     renderBullet: function (index, className) {
       return `<li class="carusel__dots-item ${className}">
-          <button class="carusel__dot sr-only" type="button">${index + 1}</button>
+          <button class="carusel__dot sr-only" type="button">${
+            index + 1
+          }</button>
         </li>`;
     },
   },
