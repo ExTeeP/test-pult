@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page nojs" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="description" content="HTML5 webpack boilerplate" />
-    <title>HTML5 webpack boilerplate</title>
+    <meta name="description" content="Gallo Acoustics - огромный ассортимент акустики в интернет-магазине Pult.ru, доставка по всей России" />
+    <title>Купить продукцию Gallo Acoustics в интернет-магазине Pult.ru</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/vendors/normalize-css/normalize.min.css" />
     <script>
       if(!window.HTMLPictureElement) {
@@ -13,14 +15,23 @@
       };
     </script>
   </head>
-  <body>
+  <body class="page__body" id="main">
     <!--header.html-->
-    <%= _.template(require('../includes/common/header.html').default)({}) %>
+    <%= _.template(require('../includes/common/header.html').default)({
+      menuTemplate: _.template(require('../includes/common/menu.html').default)
+    }) %>
     <main>
-      <!--index/hero.html-->
-      <%= _.template(require('../includes/index/hero.html').default)({}) %>
-      <!--index/structure.html-->
-      <%= _.template(require('../includes/index/structure.html').default)({}) %>
+      <!--index/discount.html-->
+      <%= _.template(require('../includes/index/discount.html').default)({}) %>
+
+      <!--index/carusel.html-->
+      <%= _.template(require('../includes/index/carusel.html').default)({}) %>
+
+      <!--index/products.html-->
+      <%= _.template(require('../includes/index/products.html').default)({
+        menuTemplate: _.template(require('../includes/common/menu.html').default),
+        productTemplate: _.template(require('../includes/common/product.html').default)
+      }) %>
     </main>
     <!--footer.html-->
     <%= _.template(require('../includes/common/footer.html').default)({}) %>

@@ -1,14 +1,27 @@
 /* Здесь хранятся все переменные стилей проекта. Указанные ниже переменные приведены в качестве демонстрации. */
 
+// Цвета
+:root {
+  --color-accent: #1d9cd8;
+  --color-accent-a80: rgb(29, 156, 216, 0.8);
+  --color-accent-light: #8ecae4;
+  --color-white: #ffffff;
+  --color-white-a80: rgba(255, 255, 255, 0.8);
+  --color-white-a10: rgb(255, 255, 255, 0.1);
+  --color-black: #222222;
+  --color-grey: #777777;
+
+  --swiper-pagination-color: var(--color-accent);
+}
+
 // Размеры вьюпорта
 $sm: 320px;
 $md: 768px;
-$xl: 1280px;
+$lr: 940px;
+$xl: 1240px;
 
-// Цвета
-$black: #000;
-$white: #fff;
-$grey: #ccc;
+// Отступ
+$offset: 20px;
 
 // Шрифты
-$main-font: "Roboto", "Arial", sans-serif;
+$main-font: "Rubik", "Roboto", "Arial", sans-serif;

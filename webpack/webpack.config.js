@@ -105,6 +105,9 @@ module.exports = {
       filename: 'css/[name].min.css',
     }),
     new HtmlWebpackPlugin({
+      template: 'source/html/includes/common/header.html',
+    }),
+    new HtmlWebpackPlugin({
       template: 'source/html/views/index.html',
     }),
     new PreloadWebpackPlugin({
